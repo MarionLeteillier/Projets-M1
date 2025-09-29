@@ -10,5 +10,5 @@ Constitution d’un petit corpus (résumés DUMAS) et conception d’une express
 
 [Compte-rendu de corpus écrits (PDF)](./
 Compte-rendu d’annotation de coréférence sur des contes (sous-corpus NORM-EC CE2) : justification des choix (anaphores zéro, pronoms clitiques, cataphores, métonymies), adjudication des désaccords, et scores inter-annotateurs (0.35 à 1.00). Discussion des ambiguïtés fréquentes (discours direct, multiplicité de personnages) et mini-analyse statistique (pronoms, anaphores, longueur des textes).  
-[Captures d'annotations (PDF)](./
+[Captures d'annotations (PDF)](./captures_ecran_textes_finaux.pdf)
 Jeu de captures d’annotations (extraits `.conllu`) des textes finaux servant d’illustrations/annexes au projet d’annotation. Sert de preuve visuelle du travail réalisé (fichiers et segments annotés).  
