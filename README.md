@@ -5,3 +5,5 @@
 
 [Théorie des langages RegEx (PDF)](./théorie_des_langages_devoir_maison_individuel.pdf)
 Constitution d’un petit corpus (résumés DUMAS) et conception d’une expression régulière capable de détecter/extraire les annonces de plan (1re/2e/3e partie, connecteurs « Ensuite », « Enfin », etc.), puis évaluation de la généralisation sur d’autres disciplines.
+
+Exposé sur les “thanabots” et la résurrection numérique : étude de cas (Alexa/voice cloning, Eternime, Project December, deepfakes – pub d’Elis Regina, Black Mirror “Be Right Back”) et mise en perspective éthique & juridique (consentement post-mortem, deuil, exploitation commerciale, RGPD/France, RUFADAA, etc.).  
