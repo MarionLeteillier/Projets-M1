@@ -19,4 +19,4 @@ Analyse d’interactions en grande section autour d'un conte : transcription (se
 Fichier Praat TextGrid alignés au temps
 
 [Compte-rendu de formalisme / chunker (PDF)](./compterendu_chunker_formalisme_individuel.pdf)
-Implémentation d’un [chunker](./ en Python qui segmente un texte en groupes (N, PN, V, SV, etc) via un lexique et une base de règles (suffixes, patrons catégoriels, gestion BR/phrases) puis génère une sortie XML et une visualisation HTML/CSS. Démonstration sur un article satirique (Legorafi) avec un jeu de textes. Comparaison avec une segmentation manuelle réalisée sous Excel.
+Implémentation d’un [chunker](./chunker.py) en Python qui segmente un texte en groupes (N, PN, V, SV, etc) via un [lexique](./lexique.txt) et une [base de règles](./regles.txt) (suffixes, patrons catégoriels, gestion BR/phrases) puis génère une [sortie XML](./sortie_chunker.xml) et une [visualisation HTML/CSS](./chunking_live.html). Démonstration sur un article satirique (Legorafi) avec un [texte](./texte.txt) et une [dtd](./chunker.dtd). Comparaison avec une segmentation manuelle réalisée sous Excel.
