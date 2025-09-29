@@ -1,0 +1,59 @@
+.chunk { /*style général pour tous les chunk*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.65em;
+  color: white;
+  display: inline-block;
+  padding: 2px 6px;
+  margin: 2px 2px;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  line-height: 1.2;
+}
+
+.chunk::before {
+  content: "[" attr(cat) "] ";
+  font-weight: bold;
+  color: #5c4033; /* marron */
+  text-shadow: 0.5px 0.5px 1px #3a241d;
+}
+
+.chunk::after {
+  content: " ";
+  display: inline-block;
+  width: 3px;
+}
+
+.chunk[cat="UNK"] {
+  background: linear-gradient(135deg, #f52121, #db5e5e);
+  color: white;
+  box-shadow: 0 0 4px #f51515;
+}
+
+.chunk[cat="SV"]      { background: linear-gradient(135deg, #6fa8dc, #3c78d8); }
+.chunk[cat="SVInv"]   { background: linear-gradient(135deg, #8e7cc3, #674ea7); }
+.chunk[cat="Pver"]    { background: linear-gradient(135deg, #f6b26b, #e69138); }
+.chunk[cat="V"]       { background: linear-gradient(135deg, #ffd966, #f1c232); }
+.chunk[cat="Pvant"]   { background: linear-gradient(135deg, #93c47d, #6aa84f); }
+.chunk[cat="PN"]      { background: linear-gradient(135deg, #a1e2f0, #45818e); }
+.chunk[cat="N"]       { background: linear-gradient(135deg, #dce3f0, #a4c2f4); }
+.chunk[cat="ADV"]     { background: linear-gradient(135deg, #b4a7d6, #8e7cc3); }
+.chunk[cat="Adj"]     { background: linear-gradient(135deg, #f9cb9c, #f6b26b); }
+.chunk[cat="CSUB"]    { background: linear-gradient(135deg, #d5a6bd, #c27ba0); }
+.chunk[cat="PREL"]    { background: linear-gradient(135deg, #ffe599, #ffd966); }
+.chunk[cat="PRelSuj"] { background: linear-gradient(135deg, #b6d7a8, #93c47d); }
+.chunk[cat="PCTF"]    { background: linear-gradient(135deg, #a4c2f4, #6fa8dc); }
+.chunk[cat="PCTNF"]   { background: linear-gradient(135deg, #cfe2f3, #9fc5e8); }
+.chunk[cat="GO"]      { background: linear-gradient(135deg, #f4cccc, #ea9999); }
+.chunk[cat="GF"]      { background: linear-gradient(135deg, #d9ead3, #b6d7a8); }
+.chunk[cat="PPS"]     { background: linear-gradient(135deg, #ead1dc, #d5a6bd); }
+.chunk[cat="PDEM"]    { background: linear-gradient(135deg, #d0e0e3, #a2c4c9); }
+.chunk[cat="Ver"]     { background: linear-gradient(135deg, #fff2cc, #f9cb9c); }
+.chunk[cat="Coord"]   { background: linear-gradient(135deg, #cccccc, #999999); }
+
+.br-marker {
+  font-weight: bold;
+  color: #555;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-family: monospace;
+}

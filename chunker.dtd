@@ -1,0 +1,10 @@
+<!ELEMENT texte (paragraphe+)>
+<!ATTLIST texte
+    src CDATA #REQUIRED
+    date CDATA #REQUIRED>
+<!ELEMENT paragraphe (phrase+)>
+<!ELEMENT phrase (chunk+)>
+<!ELEMENT chunk (#PCDATA)>
+<!ATTLIST chunk
+    cat CDATA #REQUIRED
+    regle CDATA #REQUIRED>
