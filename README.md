@@ -12,3 +12,9 @@ Constitution d’un petit corpus (résumés DUMAS) et conception d’une express
 Compte-rendu d’annotation de coréférence sur des contes (sous-corpus NORM-EC CE2) : justification des choix (anaphores zéro, pronoms clitiques, cataphores, métonymies), adjudication des désaccords, et scores inter-annotateurs (0.35 à 1.00). Discussion des ambiguïtés fréquentes (discours direct, multiplicité de personnages) et mini-analyse statistique (pronoms, anaphores, longueur des textes). Inception est une plateforme web open-source d’annotation de textes pour le TAL/NLP, conçue pour des projets multi-utilisateurs et pour des tâches sémantiques avancées.
 [Captures d'annotations (PDF)](./captures_ecran_textes_finaux.pdf)
 Jeu de captures d’annotations (extraits `.conllu`) des textes finaux servant d’illustrations/annexes au projet d’annotation. Sert de preuve visuelle du travail réalisé (fichiers et segments annotés).  
+
+[Compte-rendu de corpus oraux et multimodaux (PDF)](./)
+Analyse d’interactions en grande section autour d'un conte : transcription (segmentation respi/pauses), alignement phonologique BAS Web Services / MAUS → TextGrid, schéma d’annotation (types de phrases, questions ouvertes/fermées, interventions de la maîtresse) puis synthèse des résultats par élève (3 vidéos). 
+[Fichier Praat TextGrid (txt)](./)
+Fichier Praat TextGrid alignés au temps, avec tiers *Maîtresse* (transcription) et *Intervention Maîtresse* (fonctions : « Demande de participation », « Lecture/Répétition », « Discipline », etc.)
+
