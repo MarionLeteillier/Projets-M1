@@ -15,6 +15,6 @@ Jeu de captures d’annotations (extraits `.conllu`) des textes finaux servant d
 
 [Compte-rendu de corpus oraux et multimodaux (PDF)](./)
 Analyse d’interactions en grande section autour d'un conte : transcription (segmentation respi/pauses), alignement phonologique BAS Web Services / MAUS → TextGrid, schéma d’annotation (types de phrases, questions ouvertes/fermées, interventions de la maîtresse) puis synthèse des résultats par élève (3 vidéos). 
-[Fichier Praat TextGrid (txt)](./)
+[Fichier Praat TextGrid (txt)](./exemple_textgrid_praat_104C0005merged__2_.txt)
 Fichier Praat TextGrid alignés au temps, avec tiers *Maîtresse* (transcription) et *Intervention Maîtresse* (fonctions : « Demande de participation », « Lecture/Répétition », « Discipline », etc.)
 
