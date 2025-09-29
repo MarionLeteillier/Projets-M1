@@ -8,7 +8,7 @@ Constitution d’un petit corpus (résumés DUMAS) et conception d’une express
 
 [Base et éthique du TAL (PDF)](./bases_ethique_TAL_Projet.pdf) Exposé sur les “thanabots” et la résurrection numérique : étude de cas (Alexa/voice cloning, Eternime, Project December, deepfakes – pub d’Elis Regina, Black Mirror “Be Right Back”) et mise en perspective éthique & juridique (consentement post-mortem, deuil, exploitation commerciale, RGPD/France, RUFADAA, etc.).  
 
-[Compte-rendu de corpus écrits (PDF)](./
+[Compte-rendu de corpus écrits (PDF)](./corpus_ecrits_inception_projet.pdf)
 Compte-rendu d’annotation de coréférence sur des contes (sous-corpus NORM-EC CE2) : justification des choix (anaphores zéro, pronoms clitiques, cataphores, métonymies), adjudication des désaccords, et scores inter-annotateurs (0.35 à 1.00). Discussion des ambiguïtés fréquentes (discours direct, multiplicité de personnages) et mini-analyse statistique (pronoms, anaphores, longueur des textes). Inception est une plateforme web open-source d’annotation de textes pour le TAL/NLP, conçue pour des projets multi-utilisateurs et pour des tâches sémantiques avancées.
 [Captures d'annotations (PDF)](./captures_ecran_textes_finaux.pdf)
 Jeu de captures d’annotations (extraits `.conllu`) des textes finaux servant d’illustrations/annexes au projet d’annotation. Sert de preuve visuelle du travail réalisé (fichiers et segments annotés).  
