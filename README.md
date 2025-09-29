@@ -18,3 +18,5 @@ Analyse d’interactions en grande section autour d'un conte : transcription (se
 [Fichier Praat TextGrid (txt)](./exemple_textgrid_praat_104C0005merged__2_.txt)
 Fichier Praat TextGrid alignés au temps
 
+[Compte-rendu de formalisme / chunker (PDF)](./
+Implémentation d’un chunker en Python qui segmente un texte en groupes (N, PN, V, SV, etc) via un lexique et une base de règles (suffixes, patrons catégoriels, gestion BR/phrases) puis génère une sortie XML et une visualisation HTML/CSS. Démonstration sur un article satirique (Legorafi) avec un jeu de textes.  
