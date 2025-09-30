@@ -1,0 +1,137 @@
+<html>
+<head>
+    <title>Révision de français CE1 - Lecture !</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Révision de français CE1</h1>
+        <nav>
+            <ul>
+                <li><a href="accueil1.html">Accueil</a></li>
+                <li><a href="lexique.html">Lexique</a></li>
+                <li><a href="conjugaison.html">Conjugaison</a></li>
+                <li><a href="grammaire.html">Grammaire</a></li>
+                <li><a href="orthographe.html">Orthographe</a></li>
+                <li><a href="lecture.html">Lecture</a></li>
+				<li><a href="dictée.html">Dictée</a></li>
+				<li><a href="bilan.html">Bilan</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="ref">
+        <p>Lis le texte et réponds aux questions !</p>
+    </div>
+    <section>
+        <article>
+            <h2>Exercice 1 : Réponds à la question !</h2>
+            <p class="phrase">La nuit, Ruset le renard roux va chasser. Chaque matin, il rapporte un lièvre ou un oiseau aux renardeaux. Il regarde les jeunes renards manger puis il s’endort. Vers midi, Ruset sort du terrier. Les renardeaux le suivent. Ils courent et ils sautent autour du terrier. Leur père les surveille.</p>
+            <p>Que fait Ruset la nuit ?</p>
+            <input type="text" id="reponse">
+            <button id="reponsevraie">Valider</button>
+            <img src="vraianimal.jpg" alt="BRAVO" class="animal" style="display: none;">
+            <p id="retour"></p>
+        </article>
+        <article>
+            <h2>Exercice 2 : Vrai ou Faux ?</h2>
+            <p class="phrase">Le renard donne des écureuils à manger aux renardeaux.</p>
+            <div id="eval-vf">
+                <p class="reponse-vf" data-correct="false">Faux</p>
+                <p class="reponse-vf" data-correct="true">Vrai</p>
+                <p id="retour-vf"></p>
+            </div>
+        </article>
+        <article>
+            <h2>Exercice 3 : Remet dans l'ordre !</h2>
+            <div id="mots">
+                <span class="àglisser">plusieurs</span>
+                <span class="àglisser">galeries</span>
+                <span class="àglisser">avec</span>
+                <span class="àglisser">un</span>
+                <span class="àglisser">terrier</span>
+                <span class="àglisser">il</span>
+                <span class="àglisser">a</span>
+            </div>
+            <div id="zone-drop" class="zoneàglisser"></div>
+            <button id="valider-ordre">Valider</button>
+            <p id="retour-ordre"></p>
+        </article>
+        <div id="bilan-section">
+            <button id="bilan">Bilan</button>
+            <div id="bilan-resultat" style="display: none;">
+                <h2>Résultats du Bilan</h2>
+                <p id="bilan-ex1"></p>
+                <p id="bilan-ex2"></p>
+                <p id="bilan-ex3"></p>
+            </div>
+        </div>
+    </section>
+    <script>
+    let exercice1Correct = false; //variable pour suivre si l'exercice est réussi 
+    let exercice2Correct = false;
+    let exercice3Correct = false;
+    $("#reponsevraie").click(function () { //pour l'exercice 1
+        const reponse = $("#reponse").val().toLowerCase().trim(); //récupère + nettoie la réponse (sensible à la casse)
+        const image = $("img.animal"); //récupère image
+        const bonnesReponses = [ //liste des bonnes réponses
+            "il va chasser", // plusieurs réponses possibles
+            "ruset va chasser",
+            "il chasse la nuit",
+            "ruset chasse"
+        ];
+        if (bonnesReponses.includes(reponse)) { //si bonne réponse
+            $("#retour").text("Vrai !"); //affiche Vrai !
+            image.show(); //affiche l'image
+            exercice1Correct = true; //l'exercice est réussi
+        } else { //sinon
+            $("#retour").text("Faux !"); //affiche Faux !
+            image.hide(); //cache l'image
+            exercice1Correct = false; //l'exercice n'est pas réussi
+        }
+    });
+    $(".reponse-vf").click(function () { //exercice 2
+        const correct = $(this).data("correct"); //si bonne réponse
+        if (correct) {
+            $("#retour-vf").text("Oui c'est ça !"); //message de réussite
+            exercice2Correct = true; //l'exercice est réussi
+        } else {
+            $("#retour-vf").text("Non c'est pas ça ! Réessaye "); //message d'échec
+            exercice2Correct = false; //l'exercice n'est pas réussi
+        }
+    });
+    $(".àglisser").on("click", function () { //exercice 3
+        const text = $(this).text().trim(); //récupère et nettoie les mots cliqués
+        $("#zone-drop").append(`<span class="zone-mot">${text}</span> `); //ajoute mots dans la zone de dépôt
+        $(this).hide(); //cache le mot cliqué
+    });
+    $("#zone-drop").on("click", ".zone-mot", function () { //retire un mot de la zone de dépôt
+        const text = $(this).text(); //récupère le texte du mot cliqué
+        $(this).remove(); //supprime le mot de la zone de dépôt
+        $(`.àglisser:contains('${text}')`).show(); //réaffiche le mot dans les options
+    });
+    $("#valider-ordre").click(function () { 
+        const reponse = $("#zone-drop").text().trim().replace(/\s+/g, " ").toLowerCase(); //récupère et nettoie la phrase reconstituée (bien dans l'ordre)
+        const bonnePhrase = "il a un terrier avec plusieurs galeries"; //la bonne réponse
+        if (reponse === bonnePhrase) { //vérifie si la phrase est correcte
+            $("#retour-ordre").text("Bravo !"); //message de réussite
+            exercice3Correct = true; //l'exercice est réussi
+        } else {
+            $("#retour-ordre").text("Non, essaie encore !"); //message d'échec
+            exercice3Correct = false; //l'exercice n'est pas réussi
+        }
+    });
+    // Bilan
+    $("#bilan").click(function () { //
+        const bilanResultat = $("#bilan-resultat");
+        bilanResultat.show(); //affiche le bilan
+        $("#bilan-ex1").text(`Exercice 1 : ${exercice1Correct ? "Réussi" : "Non réussi"}`); //affiche le résultat de chaques exercices
+        $("#bilan-ex2").text(`Exercice 2 : ${exercice2Correct ? "Réussi" : "Non réussi"}`);
+        $("#bilan-ex3").text(`Exercice 3 : ${exercice3Correct ? "Réussi" : "Non réussi"}`);
+        const totalLecture = (exercice1Correct ? 1 : 0) + (exercice2Correct ? 1 : 0) + (exercice3Correct ? 1 : 0); //calcule le score total
+        localStorage.setItem("lecture_score", totalLecture); //stockage du score en mémoire
+    });
+</script>
+</body>
+</html>

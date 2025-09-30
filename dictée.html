@@ -1,0 +1,72 @@
+<html lang="fr"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--sur mobile-->
+    <title>Révision de français CE1 - Compréhension</title> 
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Révision de français CE1</h1>
+        <nav>
+            <ul>
+                <li><a href="accueil1.html">Accueil</a></li> 
+                <li><a href="lexique.html">Lexique</a></li> 
+                <li><a href="conjugaison.html">Conjugaison</a></li> 
+                <li><a href="grammaire.html">Grammaire</a></li> 
+                <li><a href="orthographe.html">Orthographe</a></li> 
+                <li><a href="lecture.html">Lecture</a></li> 
+                <li><a href="dictée.html">Dictée</a></li>
+                <li><a href="bilan.html">Bilan</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <article>
+            <h2>Exercice : Dictée (vidéo)</h2>
+            <p>Regarde la vidéo ci-dessous et écris la dictée en dessous :</p> <!--consigne-->
+            <p>(valide avant la correction à 3min30, ne triche pas !)</p>
+			<!--vidéo youtube--><!--largeur--><!--hauteur--><!--URL--><!--supprime les bordures--><!--autorise fonctionnalités = autoplay, mode plein écran, accès aux capteurs (accéléromètre, gyroscope)-->
+            <iframe
+                width="640"
+                height="360"
+                src="https://www.youtube.com/embed/KvN2Pd40LmY"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"> 
+				</iframe>
+            <textarea id="dictee" placeholder="Écris la dictée ici..."></textarea> <!--champ de texte pour écrire-->
+            <button id="valider-dictee">Valider</button> <!--bouton pour valider-->
+            <p id="retour-dictee"></p> <!--zone pour afficher messages retour-->
+        </article>
+        <div id="bilan-section">
+            <button id="bilan">Bilan</button> <!--bouton pour afficher bilan-->
+            <div id="bilan-resultat" style="display: none;"> <!--section bilan initialement masquée-->
+                <h2>Résultats</h2>
+                <p id="bilan-dictee"></p> <!--résultat-->
+            </div>
+        </div>
+    </section>
+   <script> 
+    const bonneReponse = "J'ai un ami qui s'appelle Abou. Nous avons 8 ans. Il est arrivé d'Afrique avec toute sa famille. Nous habitons dans la même rue et, le matin, nous allons à l'école ensemble."; 
+    
+    $("#valider-dictee").click(function () { 
+        const reponseDictee = $("#dictee").val().trim(); // récupère la réponse saisie
+        if (reponseDictee === bonneReponse) { // compare avec la bonne réponse
+            $("#retour-dictee").text("Bravo !"); // affiche un message si réussi
+            dicteeCorrecte = true; // marque l'exercice comme réussi
+        } else { // sinon
+            $("#retour-dictee").text("Réessaie, il y a des erreurs."); // affiche un message d'échec
+            dicteeCorrecte = false; // marque l'exercice comme échoué
+        }
+        localStorage.setItem("dictee_score", dicteeCorrecte ? 1 : 0); //enregistre 1 si réussi sinon 0
+    });
+    
+    $("#bilan").click(function () {
+        $("#bilan-resultat").show(); // affiche la section bilan
+        $("#bilan-dictee").text(`Exercice 1 : ${dicteeCorrecte ? "Réussi" : "Non réussi"}`); // affiche si la dictée est réussie ou non
+    });
+</script>
+
+</body>
+</html>
