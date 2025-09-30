@@ -29,9 +29,9 @@ Application pour les enseignants pour gérer des **dictées** : création d’un
 - Base de données (dumps) : [eleves.sql](./eleves%20(1).sql) · [dictees.sql](./dictees%20(2).sql) · [lexique.sql](./lexique%20(2).sql) · [reponses.sql](./reponses%20(1).sql)  
 - Code (dossier `app/`) : [index.php](./app/index.php) · [passation.php](./app/passation.php) · [create_dictee.php](./app/create_dictee.php) · [save_dictee.php](./app/save_dictee.php) · [analyser_reponse.php](./app/analyser_reponse.php) · [stats.php](./app/stats.php) · [export_par_dictee.php](./app/export_par_dictee.php) · [export_par_eleve.php](./app/export_par_eleve.php) · [correction_externe.php](./app/correction_externe.php) · [connexion.php](./app/connexion.php)
 
-[Compte rendu Programmation WEB (PDF)](./TP/Marion%20Leteillier%20Programmation%20Web.pdf)  
-Mini-site **HTML/CSS** de révision *Français CE1* : pages **Accueil**, **Lexique**, **Conjugaison**, **Grammaire**, **Orthographe**, **Lecture**, **Dictée**, **Bilan**. Mise en forme via [`styles.css`](./TP/styles.css) et médias d’illustration.
-- Pages : [accueil1.html](./TP/accueil1.html) · [lexique.html](./TP/lexique.html) · [conjugaison.html](./TP/conjugaison.html) · [grammaire.html](./TP/grammaire.html) · [orthographe.html](./TP/orthographe.html) · [lecture.html](./TP/lecture.html) · [dictée.html](./TP/dictée.html) · [bilan.html](./TP/bilan.html)  
+[Compte rendu Programmation WEB (PDF)](./TP/MarionLeteillier_ProgrammationWeb.pdf)  
+Mini-site **HTML/CSS** de révision *Français CE1* : pages **Accueil**, **Lexique**, **Conjugaison**, **Grammaire**, **Orthographe**, **Lecture**, **Dictée**, **Bilan**. Mise en forme via [`styles.css`](./styles.css) et médias d’illustration.
+- Pages : [accueil1.html](./accueil1.html) · [lexique.html](./lexique.html) · [conjugaison.html](./conjugaison.html) · [grammaire.html](./grammaire.html) · [orthographe.html](./orthographe.html) · [lecture.html](./lecture.html) · [dictée.html](./dictée.html) · [bilan.html](./bilan.html)  
 - Assets : `vrai.png`, `faux.png`, `gifvrai.gif`, `faux.gif`, `vraianimal.jpg`
 
 [Notebook Python](./Python%20Projet%201.ipynb)
