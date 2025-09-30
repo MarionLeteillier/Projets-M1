@@ -1,0 +1,88 @@
+<html lang="fr">
+  <head>
+    <title>Révision de français CE1 - Orthographe !</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Révision de français CE1</h1>
+      <nav>
+        <ul>
+          <li><a href="accueil1.html">Accueil</a></li>
+          <li><a href="lexique.html">Lexique</a></li>
+          <li><a href="conjugaison.html">Conjugaison</a></li>
+          <li><a href="grammaire.html">Grammaire</a></li>
+          <li><a href="orthographe.html">Orthographe</a></li>
+          <li><a href="lecture.html">Lecture</a></li>
+          <li><a href="dictée.html">Dictée</a></li>
+          <li><a href="bilan.html">Bilan</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="ref">
+      <p>Homophones : Écris le mot avec le bon orthographe !</p>
+    </div>
+    <section>
+      <article>
+        <h2>Exercice</h2>
+        <p class="phrase">"Elle ___ partie à la boulangerie."</p>
+        <div class="eval" id="eval1">
+          <p class="reponse" data-correct="false">et</p>
+          <p class="reponse" data-correct="true">est</p>
+        </div>
+      </article>
+      <article>
+        <p class="phrase">"Les oiseaux ___ dans leur nid."</p>
+        <div class="eval" id="eval2">
+          <p class="reponse" data-correct="false">son</p>
+          <p class="reponse" data-correct="true">sont</p>
+        </div>
+      </article>
+      <article>
+        <p class="phrase">"Il ___ beaucoup de jouets."</p>
+        <div class="eval" id="eval3">
+          <p class="reponse" data-correct="true">a</p>
+          <p class="reponse" data-correct="false">à</p>
+        </div>
+      </article>
+      <article>
+        <p class="phrase">"Tu veux un chocolat chaud ___ un jus d'orange ?"</p>
+        <div class="eval" id="eval4">
+          <p class="reponse" data-correct="false">où</p>
+          <p class="reponse" data-correct="true">ou</p>
+        </div>
+      </article>
+     <div id="bilan1" style="text-align: center;">
+            <button id="bilan">Bilan</button> <!--bouton pour afficher le score final-->
+            <p id="score"></p> <!--affiche score final-->
+        </div>
+     
+    </section>
+<script>
+    let score = 0; //initialise la variable score pour compter les réponses correctes
+    $(".reponse").on("click", function () { //ajoute un gestionnaire d'événements `click` à tous les éléments ayant la classe `reponse`
+        const correct = $(this).data("correct"); //récupère vrai si la réponse est correcte sinon faux
+        $(this).siblings().find("img").remove(); //supprime l'image
+        if (correct) { //si bonne réponse
+            $(this).append('<img src="vrai.png" alt="Bonne réponse" style="margin-left: 10px; width: 20px;">'); //affiche image de bonne réponse
+            score++; //incrémente le score de 1
+        } else { //si réponse fausse
+            $(this).append('<img src="faux.png" alt="Mauvaise réponse" style="margin-left: 10px; width: 20px;">'); //affiche image de mauvraise réponse
+        }
+    });
+    $(".reponse").on("mouseover", function () { //quand la souris survole l'élément
+        $(this).addClass("survol"); //style de survol, ajout d'une classe
+    });
+    $(".reponse").on("mouseleave", function () { //quand la souris ne survole plus
+        $(this).removeClass("survol"); //supprime la classe
+    });
+    $("#bilan").on("click", function () { 
+        $("#bilan1").show(); //affiche bilan1 initialement caché
+        $("#score").text("Tu as " + score + " bonne(s) réponse(s) sur 4."); //affiche le score avec phrase
+        localStorage.setItem("orthographe_score", score); //stockage du score
+    });
+</script>
+  </body>
+</html>
