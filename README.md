@@ -6,12 +6,12 @@
 [Théorie des langages RegEx (PDF)](./théorie_des_langages_devoir_maison_individuel.pdf)
 Constitution d’un petit corpus (résumés DUMAS) et conception d’une expression régulière capable de détecter/extraire les annonces de plan (1re/2e/3e partie, connecteurs « Ensuite », « Enfin », etc.), puis évaluation de la généralisation sur d’autres disciplines.
 
-[Base et éthique du TAL (PDF)](./bases_ethique_TAL_Projet.pdf) Exposé sur les “thanabots” et la résurrection numérique : étude de cas (Alexa/voice cloning, Eternime, Project December, deepfakes – pub d’Elis Regina, Black Mirror “Be Right Back”) et mise en perspective éthique & juridique (consentement post-mortem, deuil, exploitation commerciale, RGPD/France, RUFADAA, etc.).  
+[Exposé Base et éthique du TAL (PDF)](./bases_ethique_TAL_Projet.pdf) Exposé sur les “thanabots” et la résurrection numérique : étude de cas (Alexa/voice cloning, Eternime, Project December, deepfakes – pub d’Elis Regina, Black Mirror “Be Right Back”) et mise en perspective éthique & juridique (consentement post-mortem, deuil, exploitation commerciale, RGPD/France, RUFADAA, etc.).  
 
 [Compte-rendu de corpus écrits (PDF)](./corpus_ecrits_inception_projet.pdf)
-Compte-rendu d’annotation de coréférence sur des contes (sous-corpus NORM-EC CE2) : justification des choix (anaphores zéro, pronoms clitiques, cataphores, métonymies), adjudication des désaccords, et scores inter-annotateurs (0.35 à 1.00). Discussion des ambiguïtés fréquentes (discours direct, multiplicité de personnages) et mini-analyse statistique (pronoms, anaphores, longueur des textes). Inception est une plateforme web open-source d’annotation de textes pour le TAL/NLP, conçue pour des projets multi-utilisateurs et pour des tâches sémantiques avancées.
+Compte-rendu d’annotation de coréférence sur des contes : justification des choix (anaphores zéro, pronoms clitiques, cataphores, métonymies), adjudication des désaccords, et scores inter-annotateurs (0.35 à 1.00). Discussion des ambiguïtés fréquentes (discours direct, multiplicité de personnages) et mini-analyse statistique (pronoms, anaphores, longueur des textes). Inception = plateforme web open-source d’annotation de textes pour le TAL/NLP, conçue pour des projets multi-utilisateurs et pour des tâches sémantiques avancées.
 [Captures d'annotations (PDF)](./captures_ecran_textes_finaux.pdf)
-Jeu de captures d’annotations (extraits `.conllu`) des textes finaux servant d’illustrations/annexes au projet d’annotation. Sert de preuve visuelle du travail réalisé (fichiers et segments annotés).  
+Jeu de captures d’annotations (.conllu) des textes finaux servant d’illustrations/annexes au projet d’annotation.
 
 [Compte-rendu de corpus oraux et multimodaux (PDF)](./corpus_oraux_projet.pdf)
 Analyse d’interactions en grande section autour d'un conte : transcription (segmentation respi/pauses), alignement phonologique BAS Web Services / MAUS → TextGrid, schéma d’annotation (types de phrases, questions ouvertes/fermées, interventions de la maîtresse) puis synthèse des résultats par élève (3 vidéos). 
@@ -19,4 +19,19 @@ Analyse d’interactions en grande section autour d'un conte : transcription (se
 Fichier Praat TextGrid alignés au temps
 
 [Compte-rendu de formalisme / chunker (PDF)](./compterendu_chunker_formalisme_individuel.pdf)  
-Implémentation d’un [chunker](./chunker.py) en Python qui segmente des phrases en groupes (GN/PN, GV/SV, etc.) à partir d’un [lexique](./lexique.txt) et d’une [base de règles](./regles.txt). Pipeline : pré-tokenisation → application séquentielle des règles → [sortie XML](./sortie_chunker.xml) validée par la [dtd](./chunker.dtd) → [visualisation HTML/CSS](./chunking_live.html). Démonstration sur un article satirique (Le Gorafi) avec un [texte](./texte.txt). Évaluation par comparaison à une **segmentation manuelle de référence (Excel)**, avec analyse d’erreurs et pistes d’amélioration. Comparaison avec une segmentation manuelle réalisée sous Excel. Explication des choix de modélisation, des expérimentations, des limites et des pistes d’amélioration.
+Implémentation d’un [chunker](./chunker.py) en Python qui segmente des phrases en groupes (GN/PN, GV/SV, etc.) à partir d’un [lexique](./lexique.txt) et d’une [base de règles](./regles.txt). Pipeline : pré-tokenisation → application séquentielle des règles → [sortie XML](./sortie_chunker.xml) validée par la [dtd](./chunker.dtd) → [visualisation HTML/CSS](./chunking_live.html). Démonstration sur un article satirique (Le Gorafi) avec un [texte](./texte.txt). Évaluation par comparaison à une segmentation manuelle de référence (Excel), avec analyse d’erreurs et pistes d’amélioration. Explication des choix de modélisation, des expérimentations, des limites et des pistes d’amélioration.
+
+[Exposé Gestion de projet OCR (PDF)](./gestiondeprojet_OCR.pdf)
+Conception d’un cours en ligne sur l’OCR (Moodle) pour combler un manque dans la formation TAL. Objectifs **SMART** (publication avant mi-avril, cible de performance ~70 % sur l’évaluation), **parties prenantes**, **personae**, **story-mapping** → **backlog** priorisé, planification/échéances, et bilans **RH/RSE**.  
+
+[Projet Dictée PHP MySql Js](./
+Application pour les enseignants d'écoles primaires pour gérer des **dictées** : création d’une dictée par l'enseignant, **correction** et **statistiques**, plus **exports** par élève et par dictée. Conception d’un CRUD web complet, requêtes SQL, gestion de formulaires, logique métier (analyse/correction), et production d’exports.
+- Base de données (dumps) : [eleves.sql](./eleves%20(1).sql) · [dictees.sql](./dictees%20(2).sql) · [lexique.sql](./lexique%20(2).sql) · [reponses.sql](./reponses%20(1).sql)  
+- Code (dossier `app/`) : [index.php](./app/index.php) · [passation.php](./app/passation.php) · [create_dictee.php](./app/create_dictee.php) · [save_dictee.php](./app/save_dictee.php) · [analyser_reponse.php](./app/analyser_reponse.php) · [stats.php](./app/stats.php) · [export_par_dictee.php](./app/export_par_dictee.php) · [export_par_eleve.php](./app/export_par_eleve.php) · [correction_externe.php](./app/correction_externe.php) · [connexion.php](./app/connexion.php)
+
+
+
+
+
+
+
