@@ -1,5 +1,7 @@
 **Projets-M1**
 
+*Dans un souci de confidentialité, j’ai masqué les données personnelles des personnes avec qui je réalise des projets*
+
 - [**Technologies vocales TTS (PDF)**](./projetsM1/technologies_vocales_examen_final_individuel.pdf)  
   Évaluation écrite des fondamentaux des technologies de la parole : pipeline **TTS/ASR** (**front-end/back-end**), méthodes **classiques** vs **neuronales** et limites en **dialogue spontané**. Une partie appliquée porte sur la **grammaire de transcription** (orthographe → phonétique) : **ordre des règles**, **détection des redondances** et **corrections**.
 
